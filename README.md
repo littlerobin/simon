@@ -50,3 +50,11 @@ Footer remained the same as well:
             <a href="https://github.com/littlerobin/simon">GitHub</a>
         </footer>
         
+    
+Simon CSS code
+    
+Learned about selectors and declarations and rulesets
+    
+implementing bootstrap is a little tedious
+dont forget to link html files to CSS files
+dont forget to add bootstrap to html files to get it to actually work right...
