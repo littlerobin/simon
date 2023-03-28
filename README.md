@@ -123,3 +123,55 @@ Helps ensure that the application is functional and user-friendly.
 Endpoint testing - Involves testing the API endpoints of a web application.
 Can be automated using tools such as Postman or Newman.
 Helps ensure that the API is functioning correctly and returning the expected results.
+
+update for simon-login
+
+Authorization services:
+Used to control access to resources based on user permissions.
+Typically involve user authentication and authorization.
+Can be implemented using various protocols and standards, such as OAuth and JWT.
+
+Endpoint design:
+Involves designing the endpoints of a web API to meet the needs of the application.
+Should be designed to be consistent, intuitive, and easy to use.
+Can be documented using tools such as OpenAPI or Swagger.
+
+Web service using Express:
+Express is a popular Node.js web framework.
+Can be used to build web services and APIs.
+Provides features such as routing, middleware, and error handling.
+
+Handling requests:
+Involves receiving and processing requests from clients.
+Requests can be handled using middleware functions in Express.
+Requests should be validated and processed securely to prevent security vulnerabilities.
+
+Using a Mongo database:
+MongoDB is a popular NoSQL database.
+Can be used with Node.js applications.
+Provides features such as schemaless data storage and automatic scaling.
+
+Generating authentication tokens:
+Authentication tokens are used to authenticate users and control access to resources.
+Can be generated using various algorithms, such as HMAC or RSA.
+Tokens can be signed and encrypted for security.
+
+Securing passwords:
+Passwords should be stored securely using techniques such as hashing and salting.
+Can be implemented using libraries such as bcrypt or argon2.
+Should be validated and enforced using strong password policies.
+
+Passing authentication tokens:
+Authentication tokens should be passed securely between the client and server.
+Can be passed in the headers or in the request body.
+Tokens should be validated and verified on the server side.
+
+Login endpoint:
+The login endpoint is used to authenticate users and generate authentication tokens.
+Should be designed to be secure and user-friendly.
+Can be implemented using various authentication protocols, such as OAuth or JWT.
+
+Securing endpoints:
+Endpoints should be secured to prevent unauthorized access.
+Can be secured using techniques such as authentication and authorization.
+Should be tested and validated using tools such as Postman or Newman.
