@@ -215,3 +215,32 @@ The web service is created using a simple Express application, and the client HT
 The WebSocket server is created using the WebSocketServer object from the ws library, and the HTTP connection and upgrade to WebSocket are handled manually by specifying the noServer option and handling the upgrade notification that occurs when a client requests the upgrade of the protocol from HTTP to WebSocket.
 Messages are forwarded between peers using the connection, message, and close events. When a connection is established, an object representing the connection is inserted into a list of all connections from the chat peers. Then, when a message is received, the server loops through the peer connections and forwards it on to everyone except the peer who initiated the request. Finally, a connection is removed from the peer connection list when it is closed.
 In order to keep connections alive, the WebSocket protocol supports the ability to send a ping message to see if the peer is still there and receive pong responses to indicate the affirmative. To implement this, the server sends out a ping every 10 seconds to each of its peer connections using setInterval. Connections that do not respond to the ping are terminated, while those that do respond are marked as alive. Any connection that remains in the not alive state will be cleaned up on the next pass.
+
+Update for Simon DB
+    
+MongoDB Atlas:
+
+MongoDB Atlas is a cloud-based database service offered by MongoDB, the leading NoSQL database provider.
+It is a fully managed, global cloud database that enables developers to deploy, operate, and scale their MongoDB clusters with ease.
+Atlas offers features such as automatic scaling, high availability, backup and recovery, and advanced security to help developers build highly available and scalable applications.
+With Atlas, developers can choose from different cloud providers such as AWS, Google Cloud Platform, and Microsoft Azure, and deploy their MongoDB clusters in multiple regions around the world for optimal performance.
+Data Clusters in MongoDB Atlas:
+
+In MongoDB Atlas, data clusters are a group of servers that store and manage data for a MongoDB database.
+Atlas provides different types of clusters, such as replica sets and sharded clusters, to meet the specific needs of an application.
+Replica sets are used for high availability and consist of a primary node and one or more secondary nodes that replicate data from the primary node.
+Sharded clusters are used for horizontal scaling and consist of multiple shards, each of which is a replica set.
+Atlas also offers features such as automatic scaling, data tiering, and backup and recovery to help developers manage their data clusters with ease.
+Developers can monitor their data clusters using Atlas's built-in monitoring and alerting features, and can also integrate with third-party tools such as New Relic and Datadog for more advanced monitoring and analysis.
+    
+Environment Variables:
+
+Environment variables are dynamic values that can affect the behavior of a running process or application.
+They are typically used to store configuration settings or other data that are required by an application at runtime.
+Environment variables are set and managed by the operating system or runtime environment and can be accessed by any process or application running on the same system.
+Environment variables are typically named in uppercase letters, with words separated by underscores (e.g. PATH, HOME, USER).
+They can be accessed and modified using system-specific commands or programming languages such as Bash, PowerShell, Python, and Node.js.
+Environment variables can be used to store sensitive data such as passwords or API keys, but it is recommended to use a secure mechanism such as a secrets manager or encrypted file for storing such data.
+In cloud-based environments, environment variables can be set and managed using platform-specific tools such as AWS Parameter Store or Azure Key Vault.
+Environment variables are commonly used in containerized environments such as Docker and Kubernetes to provide configuration settings to containerized applications.
+Environment variables can also be used in local development environments to provide configuration settings for developers and to ensure consistency between development, testing, and production environments.
