@@ -244,3 +244,64 @@ Environment variables can be used to store sensitive data such as passwords or A
 In cloud-based environments, environment variables can be set and managed using platform-specific tools such as AWS Parameter Store or Azure Key Vault.
 Environment variables are commonly used in containerized environments such as Docker and Kubernetes to provide configuration settings to containerized applications.
 Environment variables can also be used in local development environments to provide configuration settings for developers and to ensure consistency between development, testing, and production environments.
+
+Update for Simon React
+
+Converting an application from HTML/CSS/JavaScript to React steps:
+
+1. Reorganize Simon:
+Commit the current version in Git as the starting place for the conversion to React.
+Create a template React application using create-react-app and move it into the Simon code repository.
+Clean up the template code by uninstalling and removing unnecessary files.
+Rename .js files to .jsx extension and update the favicon and manifest files for Simon.
+2. Move template files to Simon:
+Copy the generated files from the template-react directory to the simon repository directory.
+Delete the template template-react directory.
+3. Convert to React Bootstrap:
+Refactor the code to use React Bootstrap components.
+4. Populate App.jsx:
+Add code to App.jsx to render the Simon game.
+5. Create view components:
+Refactor the code into smaller, reusable components.
+6. Create the router:
+Set up a router to handle different views of the game.
+7. Convert to React components:
+Further refactor the code to take advantage of React-specific functionality.
+8. Set up to debug:
+Configure the application for debugging.
+9. Refactor play.jsx into simonGame.jsx, simonButton.jsx, and players.jsx:
+Refactor the code into separate components for better organization.
+10. Refactor components:
+Refactor the components to create sub-components and take advantage of React-specific functionality.
+service code is moved into a subdirectory named service
+UI code is moved into the src directory
+UI code is moved from the public directory to a temporary directory named old-public and then moved to the React componentized version in the src directory
+old-public directory is deleted once all the code is moved over.
+
+To convert to React Bootstrap:
+start by installing the react-bootstrap package via npm
+  This package contains React components that wrap around the Bootstrap CSS framework, making it easier to use and customize.
+
+To install, run the following command:
+npm install bootstrap react-bootstrap
+
+import the Bootstrap CSS file in your components by adding the following line of code:
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+Move the main CSS content into a separate file called app.css and import it into your App.jsx file like so:
+import './app.css';
+
+debugging a web service running under Node.js:
+
+In production, the Node.js web service running on port 3000 serves up the Simon React application code when the browser requests index.html. The service pulls those files from the application's static HTML, CSS, and JavaScript files located in the public directory.
+
+When running in debug mode on a development environment, two HTTP servers are needed. One for the Node.js web service to debug the service endpoints, and one for the React client HTTP debugger to develop and debug the React application code.
+
+To configure the React debugger HTTP server to listen on port 3001, create a file named .env.local in the root of the project, and insert the following text: PORT=3001.
+
+Modify the package.json file to include the field "proxy": "http://localhost:3000". 
+This tells the React HTTP debugger to forward requests to port 3000, where the Node.js service is listening.
+
+Change the front-end WebSocket initialization found in the gameNotifier.js constructor to explicitly use the service port (3000) instead of the React HTTP debugger port (3001). To do this, use the dynamically injected process environment variable that is set when webpack creates the application bundle.
+
+This configuration is necessary to debug the entire application in a development environment.
